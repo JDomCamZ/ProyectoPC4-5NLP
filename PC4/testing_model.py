@@ -7,7 +7,7 @@ from transformers import GPT2Tokenizer, GPT2LMHeadModel
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 # Cargar el modelo desde el checkpoint guardado localmente
-model_path = 'out-squad/ckpt.pt'
+model_path = 'out-ag-news/ckpt.pt'
 checkpoint = torch.load(model_path)
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 model.load_state_dict(checkpoint['model'])
@@ -17,7 +17,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model.to(device)
 
 # Cargar el dataset SQuAD
-dataset = load_dataset("squad")
+dataset = load_dataset("ag_news")
 
 def evaluate_model(model, dataset, tokenizer, device):
     total_examples = 0
