@@ -35,6 +35,9 @@ Una vez entrenado el modelo, se utiliza el script `sample.py` para generar muest
 
 El output del modelo se integra al entorno de VR usando un script en C# llamado TextModel.cs. En este script, se implementa la funcionalidad de un botón que muestra el texto generado por el modelo en la pantalla del entorno VR.
 
+![image](https://github.com/JDomCamZ/ProyectoPC4-5NLP/assets/84546063/90a02563-f33c-47a7-b71b-bfd2a48c4ba3)
+
+
 ## 6. Consideraciones y Limitaciones
 
 ### Hipótesis y Finetuning
